@@ -1,0 +1,38 @@
+
+<div class="row" id="request-<%= DateTime.to_iso8601(@request.timestamp) %>">
+<div class="col">
+
+<div class="card mb-3" role="article" aria-label="Request details">
+  <div class="card-body">
+    <h5 class="card-subtitle mb-2">Request from: <%= @request.ip %> <small class="text-muted"><%= DateTime.to_iso8601(@request.timestamp) %></small> <span class="<%= @request.badge_class %>"><%= @request.method %></span></h5>
+    <p class="card-text">
+      <div class="row">
+        <div class="col-12">
+        <details>
+            <summary>Headers</summary>
+            <%= render "keyvalues.html", map: @request.headers %>
+        </details>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+        <details>
+            <summary>Query params</summary>
+            <%= render "keyvalues.html", map: @request.query_params %>
+        </details>
+        </div>
+      </div>
+      <details open id="request-body">
+        <summary>Body</summary>
+        <%= if @request.body == "" do %>
+          <small class="text-secondary"><em>No request body</em></small>
+        <% else %>
+          <samp><pre><%= @request.body %></pre></samp>
+        <% end %>
+      </details>
+    </p>
+  </div>
+</div>
+
+</div>
+</div>
