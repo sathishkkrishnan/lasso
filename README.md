@@ -50,3 +50,5 @@ _build/prod/rel/lasso/bin/lasso start
 ## Setting up app in gigalixir
 
 https://gigalixir.readthedocs.io/en/latest/getting-started-guide.html#prepare-your-app
+
+## CODE CLONED FROM https://github.com/vorce/lasso.git
