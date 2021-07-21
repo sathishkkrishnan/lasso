@@ -46,3 +46,7 @@ export SECRET_KEY_BASE=...
 MIX_ENV=prod APP_NAME=lasso MIX_ENV=prod SECRET_SALT=... mix release
 _build/prod/rel/lasso/bin/lasso start
 ```
+
+## Setting up app in gigalixir
+
+https://gigalixir.readthedocs.io/en/latest/getting-started-guide.html#prepare-your-app
